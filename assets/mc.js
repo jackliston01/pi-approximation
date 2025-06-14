@@ -14,7 +14,7 @@ async function run(){
         }
         if (i%interval == 0){
             await delay(0)
-           document.getElementById("pivalue").innerText=(total*4/n)
+           document.getElementById("pivalue").innerText=(total*4/i)
            myChart.data.datasets[1].data = [{ x: x, y: y }]
            myChart.update()            
         }
