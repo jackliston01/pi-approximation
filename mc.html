@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pi</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/j.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.2.1/math.js"></script>
+    
+    
+
+    
+</head>
+<body>
+    <h1> BLANK Digits of Pi</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="physics.html">Physics</a>
+        <a href="mc.html">Monte Carlo</a>
+    </nav>
+    <br>
+    <div class="graphdata">
+
+    
+    <input type="number" id = "n" name="n"> n <br>
+    <input type="number" id="interval" name="interval"> Interval <br>
+
+    <button type="button" onclick="run()">GO</button>
+
+</div>
+<canvas width="600" height="600" style="display: block; margin: 0 auto;" id="scchart"></canvas>
+
+        <p id ='pivalue'>pi value: Run the program first</p>
+
+<p>  <strong>n</strong>: Total number of iterations to run<br>
+  <strong>Interval</strong>: Frequency of updates </p>
+    Taking too long? Increase the interval
+
+</body>
+<script src="/assets/mc.js"></script>
+</html>

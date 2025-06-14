@@ -1,34 +1,7 @@
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("JavaScript loaded");
 
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            const pageId = e.target.dataset.page;
-        
-            navigateToPage(pageId);
-            // Update URL without reload
-            history.pushState({page: pageId}, '', `#${pageId}`);
-        });
-    });
-
-    // Handle browser back/forward buttons
-    window.addEventListener('popstate', (e) => {
-        if (e.state && e.state.page) {
-           
-            navigateToPage(e.state.page);
-        }
-    });
-
-    // Handle direct access with hash
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-        
-        navigateToPage(hash);
-    }
-});
 function ff(num) {
     if (num == 0) {
     return Decimal(1)
@@ -44,23 +17,7 @@ function ff(num) {
     
     }}
 
-function navigateToPage(pageId) {
-    
-    // Hide all pages
-    document.querySelectorAll('.page').forEach(page => {
-        
-        page.classList.remove('active');
-    });
-    
-    // Show selected page
-    const selectedPage = document.getElementById(pageId);
-    if (selectedPage) {
-       
-        selectedPage.classList.add('active');
-    } else {
-        console.error(`Page not found: ${pageId}`);
-    }
-}
+
 
 async function calc(){
     let sum= new Decimal(0)
@@ -81,7 +38,7 @@ async function calc(){
 
     if (formula === "leib") {
         console.log(100%interval==0)
-        
+        console.log('leib')
 
         for (let i =0; i<n; i++){
             let iv = new Decimal(i)

@@ -8,19 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/j.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.4.3/decimal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+    
+    
 
     
 </head>
 <body>
     <h1> BLANK Digits of Pi</h1>
     <nav>
-        <span class="nav-link" data-page="home">Home</span>
-        <span class="nav-link" data-page="about">About</span>
-        <span class="nav-link" data-page="contact">Contact</span>
+        <a href="index.html">Home</a>
+        <a href="physics.html">Physics</a>
+        <a href="mc.html">Monte Carlo</a>
+
     </nav>
     <div id="home" class="page active">
         <h1>Home Page</h1>
-        <p>Welcome to our website!</p>
         <form>
 <div class="formulachoice">
 
@@ -36,17 +39,16 @@
 
         </form>
 
-        <p id ='pivalue'>pi value</p>
-        <p id ='time'>Time:</p>
+        <p id ='pivalue'>pi value: Run the program first</p>
+        <p id ='time'>Time: N/A</p>
     </div>
-    <div id="about" class="page">
-        <h1>About Page</h1>
-        <p>Learn more about us.</p>
-    </div>
-    <div id="contact" class="page">
-        <h1>Contact Page</h1>
-        <p>Get in touch with us.</p>
-    </div>
+<p>
+  <strong>Precision</strong>: Number of decimal places to calculate pi<br>
+  <strong>n</strong>: Total number of iterations to run the selected formula<br>
+  <strong>Interval</strong>: Frequency of updates 
+  Taking too long? Increase the interval
+</p>
+
 </body>
 <script src="/assets/script.js"></script>
 </html>
